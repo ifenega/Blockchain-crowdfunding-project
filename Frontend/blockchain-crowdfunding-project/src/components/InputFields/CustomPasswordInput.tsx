@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { FormikHelpers, FormikValues } from 'formik';
 import eye from '../../assets/components/CustomInputs/eye.svg'
 import eyeOff from '../../assets/components/CustomInputs/eye-off.svg'
 
@@ -40,7 +39,7 @@ const CustomPasswordInput: React.FC<CustomPasswordInputProps> = ({ field, form, 
             />
 
             <button
-                className='absolute top-[15px] right-[16px] z-10'
+                className='absolute top-[15px] right-[16px]'
                 onClick={() => setShow(prev => !prev)}
             >
                 <img src={show ? eye : eyeOff} alt='toggle-show' />

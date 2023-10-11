@@ -55,7 +55,7 @@ const Toast: React.FC<ToastProps> = ({ message, onClose, type, title, index }) =
 
     return (
         <div
-            className={`py-2.5 px-4 grid grid-cols-[auto_1fr_auto] items-start gap-2.5 rounded-lg text-[#475467] text-xs sm:text-sm  text-left ${toastBG} transform transition-transform duration-300 ease-in-out w-full max-w-[400px] z-[9999999999] `}
+            className={`py-2.5 px-4 grid grid-cols-[auto_1fr_auto] items-start gap-2.5 rounded-lg text-[#475467] text-xs sm:text-sm  text-left ${toastBG} transform transition-transform duration-300 ease-in-out w-full  z-[9999999999] `}
             style={toastStyle}
         >
             <img src={icon} alt="" />
@@ -116,7 +116,7 @@ const ToastContainer: React.FC = () => {
         return () => {
             window.removeEventListener('show-toast', handleShowToast);
         };
-    }, [toasts]);
+    }, [toasts, showToast]);
 
     // Reverse the order of toasts before mapping and rendering them
     const reversedToasts = [...toasts].reverse();

@@ -8,14 +8,17 @@ type Props = {
 const AuthBody = (props: Props) => {
   return (
     <div
-      className='custom-gradient w-full h-full flex items-center justify-center py-[189px]'
+      className='custom-gradient w-full h-[100dvh] flex items-center justify-center py-[189px] '
     >
-      <div className='rounded-[32px] bg-[32px] py-2 sm:py-6 px-4 sm:px-8 bg-white min-h-[200px] mx-4 sm:mx-0 w-full sm:w-[460px] relative'>
-        <div className='absolute top-0 left-0 w-full px-4 sm:px-8 pt-[32px]'>
-          <ToastContainer />
+      <div className='rounded-[32px]  py-2 sm:py-6 px-4 sm:px-8 bg-white  mx-4 sm:mx-0 w-full sm:w-[460px] relative '>
+        <div className='max-h-[646px] overflow-y-scroll relative min-h-[200px] scroll-m-0'>
+          <div className='absolute top-0 left-0 w-full  pt-[32px]'>
+            <ToastContainer />
+          </div>
+
+          {props.children}
         </div>
 
-        {props.children}
       </div>
     </div>
   )

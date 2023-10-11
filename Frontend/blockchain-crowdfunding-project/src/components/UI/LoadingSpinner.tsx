@@ -1,5 +1,6 @@
 type Props = {
   size?: string;
+  color?:string
 };
 
 const LoadingSpinner = (props: Props) => {

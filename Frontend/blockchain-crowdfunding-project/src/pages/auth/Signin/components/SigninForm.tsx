@@ -65,7 +65,7 @@ const SigninForm = () => {
                                     />
 
                                     <div className='mb-1 text-right w-full'>
-                                        <TextButton text={'Forgot password?'} action={() => {  CustomToast('error', 'Forgot password')}} />
+                                        <TextButton text={'Forgot password?'} action={() => { navigate('/reset-password') }} />
                                     </div>
                                 </div>
 

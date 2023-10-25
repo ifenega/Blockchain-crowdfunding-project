@@ -7,6 +7,12 @@
   );
 }
 
+.custom-background-clip {
+  -webkit-background-clip: text; /* For older Webkit browsers */
+  background-clip: text;
+  color: transparent;
+}
+
 /* Webkit-based browsers */
 ::-webkit-scrollbar {
   width: 0;

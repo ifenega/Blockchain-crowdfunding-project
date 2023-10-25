@@ -2,7 +2,7 @@ import React from 'react'
 import bulb from '../../assets/components/UI/bulb.svg'
 import success from '../../assets/components/UI/success.svg'
 import warning from '../../assets/components/UI/warning.svg'
-import close from '../../assets/components/general/close.svg'
+
 
 
 type Props = {

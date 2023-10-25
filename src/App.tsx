@@ -5,6 +5,8 @@ import SignupConfirmation from './pages/auth/Signup/SignupConfirmation';
 import Signup from './pages/auth/Signup/SIgnup';
 import ResetPassword from './pages/auth/PasswordRecovery/ResetPassword';
 import NewPassword from './pages/auth/PasswordRecovery/NewPassword';
+import Home from './pages/donations/home/Home';
+import Donations from './pages/donations/Donations';
 
 function App() {
   return (
@@ -19,6 +21,20 @@ function App() {
         <Route path="/signup/confirmation" element={<SignupConfirmation />} />
         <Route path="/reset-password" element={<ResetPassword />} />
         <Route path="/reset-password/new" element={<NewPassword />} />
+
+        <Route
+          path="/donations"
+          element={
+            <Donations />
+          }
+        >
+          {/* Donations */}
+          <Route
+            path="/donations"
+            element={<Navigate to="/donations/home" replace />}
+          />
+          <Route path="/donations/home" element={<Home />} />
+        </Route>
 
       </Routes>
     </>

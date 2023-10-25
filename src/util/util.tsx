@@ -76,3 +76,8 @@ export const CustomToast = (type: ToastType, message: string, title?: string) =>
     window.dispatchEvent(event);
 };
 
+export const profileImg = (name: string) => {
+    const name_split = name.split(' ')
+    return `https://eu.ui-avatars.com/api/?background=random&color=fff&name=${name_split[0]}+${name_split[1]}`
+
+}

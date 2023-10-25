@@ -25,6 +25,7 @@ const SigninForm = () => {
     // <---------- Functions ---------->
     const onSubmit = (values: any) => {
         CustomToast('success', 'Check toast if it is working')
+        navigate('/donations/home')
     }
 
     return (

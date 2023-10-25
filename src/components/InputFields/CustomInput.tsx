@@ -19,7 +19,7 @@ const CustomInput: React.FC<CustomInputProps> = ({ field, form, ...props }) => {
     const { name, value, type } = field;
     const { errors, touched } = form;
 
-    const [show, setShow] = useState(false)
+
 
     return (
         <div className='w-full'>

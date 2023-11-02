@@ -5,8 +5,8 @@ import SignupConfirmation from './pages/auth/Signup/SignupConfirmation';
 import Signup from './pages/auth/Signup/SIgnup';
 import ResetPassword from './pages/auth/PasswordRecovery/ResetPassword';
 import NewPassword from './pages/auth/PasswordRecovery/NewPassword';
-import Home from './pages/donations/home/Home';
-import Donations from './pages/donations/Donations';
+import Home from './pages/Dashboard/donations/home/Home';
+import Donations from './pages/Dashboard/donations/Donations';
 
 function App() {
   return (

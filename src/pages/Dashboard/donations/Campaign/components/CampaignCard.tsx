@@ -1,5 +1,9 @@
 import React from 'react'
 import ProgressDoughnut from './ProgressDoughnut';
+import CampaignTimer from './CampaignTimer';
+import { AppDispatch } from '../../../../../store/store';
+import { useDispatch } from 'react-redux';
+import { campaignActions } from '../../../../../store/slices/campaignSlice';
 
 type Props = {
   data: CampaignItemData;
@@ -9,18 +13,26 @@ type Props = {
 const CampaignCard = (props: Props) => {
 
 
+  // <---------- Utility class --------->
+  const dispatch: AppDispatch = useDispatch()
 
-
-
+  // <---------- useSelectors --------->
+  // <---------- HOOKS ------------>
+  // <---------- useStates + variables ---------->
+  // <---------- Functions ---------->
 
 
   return (
     <div className='p-2 rounded-xl border b
-    order-gray/100 flex flex-col gap-4 w-full max-w-[361px]'>
+    order-gray/100 flex flex-col gap-4 w-full md:max-w-[361px]'>
 
       <div className='w-full'>
         <div className='relative mb-2'>
-          <img src={props.data.img} />
+          <img src={props.data.img} alt='' className='w-full max- h-[153px] rounded object-cover' />
+
+          <div className='right-[8px] top-[8px] absolute'>
+            <CampaignTimer deadlineISOString={props.data.deadline} />
+          </div>
         </div>
 
         <h3 className='text-gray/800 font-medium mb-2'>{props.data.title}</h3>
@@ -40,8 +52,8 @@ const CampaignCard = (props: Props) => {
         </div>
 
 
-        
-<ProgressDoughnut data={props.data} />
+
+        <ProgressDoughnut data={props.data} />
 
       </div>
       <button
@@ -49,7 +61,12 @@ const CampaignCard = (props: Props) => {
         disabled={false}
         className='rounded-[99px] p-2 bg-[rgba(127,86,217,0.08)] text-[#7F56D9] text-sm font-medium w-full flex items-center justify-center'
         onClick={() => {
-          console.log('view')
+          dispatch(campaignActions.setModalFeatures({
+            title: "Campaign details",
+            size: "full"
+          }))
+          dispatch(campaignActions.setCampaignData(props.data))
+
         }}
       >View campaign</button>
 

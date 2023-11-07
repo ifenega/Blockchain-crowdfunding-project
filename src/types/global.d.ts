@@ -22,4 +22,13 @@ declare global {
         }
     }
 
+    interface CampaignSliceProps {
+        currentCampaignData: CampaignItemData | null;
+        showModal: boolean;
+        modal:{
+            size: "full" | "mid";
+            title:string
+        };
+    }
+
 }

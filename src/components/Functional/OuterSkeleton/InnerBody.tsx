@@ -2,8 +2,13 @@ import React from 'react'
 import Header from './Header'
 import Sidebar from './Sidebar'
 import { Outlet } from 'react-router-dom'
+import Modal from '../../UI/Modal'
+import ModalSelector from '../../UI/ModalSelector'
 
 const InnerBody = () => {
+
+  
+
   return (
     <>
       <Header />
@@ -13,6 +18,9 @@ const InnerBody = () => {
           <Outlet />
         </div>
 
+        <Modal >
+          <ModalSelector />
+        </Modal>
       </div>
 
     </>

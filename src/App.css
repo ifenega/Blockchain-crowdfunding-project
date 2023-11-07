@@ -21,3 +21,25 @@
 ::-webkit-scrollbar-thumb {
   background: transparent; /* Make the thumb transparent */
 }
+
+.custom-select .css-1fdsijx-ValueContainer,
+.custom-select .css-1fnvdd9-IndicatorsContainer,
+.css-qbdosj-Input .css-qbdosj-Input
+{
+  padding: 0;
+  margin: 0;
+}
+
+.custom-select .css-1u9des2-indicatorSeparator {
+  display: none;
+}
+
+
+.amount-clear #amount,
+.amount-clear #amount_to_debit,
+.amount-clear #discount_amount,
+.amount-clear #unit_price,
+.amount-input-wrapper input {
+  outline: none;
+  width: 100%;
+}

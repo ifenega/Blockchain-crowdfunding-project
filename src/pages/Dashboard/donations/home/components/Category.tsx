@@ -15,7 +15,7 @@ const Category = (props: Props) => {
                     <button
                         key={index}
                         type='button'
-                        className={`${props.currentCategory === item ? " text-white bg-primary/600 rounded-full py-2 px-4  " : " text-gray/500 py-2"} font-medium`}
+                        className={`${props.currentCategory === item ? " text-white bg-primary/600 rounded-full py-2 px-4  " : " text-gray/500 py-2"} font-medium h-fit whitespace-nowrap `}
                         onClick={() => {
                             props.selectCategory(item)
                         }}

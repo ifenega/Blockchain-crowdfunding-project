@@ -81,3 +81,11 @@ export const profileImg = (name: string) => {
     return `https://eu.ui-avatars.com/api/?background=random&color=fff&name=${name_split[0]}+${name_split[1]}`
 
 }
+
+export const copyTextToClipboard = async (props: any) => {
+    if ("clipboard" in navigator) {
+        return await navigator.clipboard.writeText(props);
+    } else {
+        return document.execCommand("copy", true, props);
+    }
+};

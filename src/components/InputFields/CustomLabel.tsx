@@ -8,7 +8,7 @@ type Props = {
 const CustomLabel = (props: Props) => {
     return (
         <label
-            className="mb-1 text-sm leading-5 text-[#667085] block w-full"
+            className="mb-1 text-sm leading-5 text-gray/500 block w-full"
             htmlFor={props.value_name}
         >
             {props.name}

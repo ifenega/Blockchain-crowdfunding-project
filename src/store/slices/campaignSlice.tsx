@@ -7,7 +7,8 @@ const initialState: CampaignSliceProps = {
     showModal: false,
     modal: {
         size: "mid",
-        title: ""
+        title: "",
+        modal_type: ""
     },
 };
 
@@ -26,6 +27,10 @@ const campaignSlice = createSlice({
             state.currentCampaignData = null;
             state.showModal = false;
             state.modal = initialState.modal
+        },
+        setAccountSettings: (state, action) => {
+            state.modal = action.payload
+            state.showModal = true
         }
     },
 });

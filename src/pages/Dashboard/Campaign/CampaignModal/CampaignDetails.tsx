@@ -1,11 +1,11 @@
 import React from 'react'
-import Button from '../../../../../components/Buttons/Button'
-import BorderButton from '../../../../../components/Buttons/BorderButton'
+import Button from '../../../../components/Buttons/Button'
+import BorderButton from '../../../../components/Buttons/BorderButton'
 import { useSelector } from 'react-redux';
 import CampaignTimer, { updateRemainingTime } from '../components/CampaignTimer';
 import ProgressDoughnut from '../components/ProgressDoughnut';
-import profile from '../../../../../assets/dashboard/campaign/profile.svg'
-import phone from '../../../../../assets/dashboard/campaign/phone.svg'
+import profile from '../../../../assets/dashboard/campaign/profile.svg'
+import phone from '../../../../assets/dashboard/campaign/phone.svg'
 
 type Props = {
     handleClose: () => void;
@@ -30,7 +30,7 @@ const CampaignDetails = (props: Props) => {
                     size='fit'
                     action={props.handleClose}
                 />
-               {updateRemainingTime(campaignDetails?.deadline).status !== 'Ended' && <Button
+                {updateRemainingTime(campaignDetails?.deadline).status !== 'Ended' && <Button
                     text={'Donate'}
                     type='button'
                     disabled={false}

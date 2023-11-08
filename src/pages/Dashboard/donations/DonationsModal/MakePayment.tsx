@@ -1,15 +1,9 @@
 import React, { useState } from 'react'
 import BorderButton from '../../../../components/Buttons/BorderButton'
 import Button from '../../../../components/Buttons/Button'
-import { ErrorMessage, Field, Form, Formik, FormikValues } from "formik";
-import * as Yup from "yup";
-import CustomLabel from '../../../../components/InputFields/CustomLabel';
-import CustomSelect from '../../../../components/InputFields/CustomSelect';
-import FormError from '../../../../components/InputFields/FormError';
-import CustomAmount from '../../../../components/InputFields/CustomAmount';
 import QrComponent from '../../../../components/UI/QrComponent';
 import { copyTextToClipboard } from '../../../../util/util';
-
+import metamask from '../../../../assets/dashboard/general/metamask.svg'
 
 type Props = {
     back: () => void
@@ -41,13 +35,13 @@ const MakePayment = (props: Props) => {
                 </div>
             </div>
 
-            <div className='flex items-center justify-center flex-col gap-4'>
+            <div className='flex items-center justify-center flex-col gap-4 mb-4'>
                 <div className='w-fit h-fit p-4'>
                     <QrComponent value={'34rwsfsdf'} />
                 </div>
 
                 <button className={`border ${copy ? " border-green-500 bg-green-200 " : " border-[#E0E6E9] "}  rounded-lg px-4 py-2.5 bg-white flex gap-3 justify-between w-full`}>
-                    <p className={`${copy ? "text-green-600 " : " text-gray/800 " } font-medium  max-w-[300px] truncate`}>0x03fc4ca83e35221bec.....908v</p>
+                    <p className={`${copy ? "text-green-600 " : " text-gray/800 "} font-medium  max-w-[300px] truncate`}>0x03fc4ca83e35221bec.....908v</p>
                     <button
                         type='button'
                         className=''
@@ -68,6 +62,55 @@ const MakePayment = (props: Props) => {
 
             </div>
 
+            <div className='rounded-lg bg-gray/100 p-4 items-center justify-center flex flex-col gap-2 mb-4'>
+                <div className='flex justify-between gap-2 items-center'>
+                    <p className='text-sm font-medium text-gray/500'>Amount to pay</p>
+                    <p className='text-gray/800 text-right text-lg font-semibold'>600 USDC</p>
+                </div>
+                <div className='flex justify-between gap-2 items-center'>
+                    <p className='text-sm font-medium text-gray/500'>Crypto amount</p>
+                    <p className='text-gray/800 text-right text-lg font-semibold'>600.049 USDC</p>
+                </div>
+                <div className='flex justify-between gap-2 items-center'>
+                    <p className='text-sm font-medium text-gray/500'>Payment network</p>
+                    <p className='text-gray/800 text-right text-lg font-semibold'>Mainet</p>
+                </div>
+            </div>
+
+
+            <div className='flex gap-1 items-center mb-4'>
+                <div className='border border-gray/300 w-full'></div>
+                <p className='text-gray/300 text-sm font-medium'>OR</p>
+                <div className='border border-gray/300 w-full'></div>
+            </div>
+
+            <div className='flex items-center justify-center'>
+                <BorderButton
+                    text={
+                        <div className='flex gap-2 items-center'>
+                            <p className='text-primary/500 font-medium text-sm'>Pay with metamask</p>
+                            <img src={metamask} alt='' />
+                        </div>
+                    }
+                    type='button'
+                    disabled={false}
+                    size='fit'
+                    action={props.handleClose}
+                />
+            </div>
+
+            <div className='flex justify-end mt-4 sm:mt-6 gap-2 items-center'>
+
+                <Button
+                    text={'I’ve made my donation'}
+                    type='submit'
+                    disabled={false}
+                    size='fit'
+                    action={() => {
+
+                    }}
+                />
+            </div>
 
         </div>
     )

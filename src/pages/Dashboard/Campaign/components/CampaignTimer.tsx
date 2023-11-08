@@ -63,7 +63,7 @@ const CampaignTimer: React.FC<Props> = (props) => {
 
             {currentTime.status === "Ended" ?
                 <p className='text-xs font-medium text-[#CF4E4E]'>Ended</p> :
-                <p className='text-xs font-medium text-[#7F56D9] w-[115px] text-left'><span className='font-normal text-[#667085]'>Ends</span> {currentTime.time}</p>}
+                <p className='text-xs font-medium text-[#7F56D9] w-[115px]  text-center'><span className='font-normal text-[#667085]'>Ends</span> {currentTime.time}</p>}
         </div>
     );
 };

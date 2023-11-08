@@ -1,9 +1,9 @@
 import React from 'react'
 import ProgressDoughnut from './ProgressDoughnut';
 import CampaignTimer from './CampaignTimer';
-import { AppDispatch } from '../../../../../store/store';
+import { AppDispatch } from '../../../../store/store';
 import { useDispatch } from 'react-redux';
-import { campaignActions } from '../../../../../store/slices/campaignSlice';
+import { campaignActions } from '../../../../store/slices/campaignSlice';
 
 type Props = {
   data: CampaignItemData;
@@ -63,7 +63,8 @@ const CampaignCard = (props: Props) => {
         onClick={() => {
           dispatch(campaignActions.setModalFeatures({
             title: "Campaign details",
-            size: "full"
+            size: "full",
+            modal_type: "campaign"
           }))
           dispatch(campaignActions.setCampaignData(props.data))
 

@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import CampaignDetails from './CampaignDetails'
-import { AppDispatch } from '../../../../../store/store'
+import { AppDispatch } from '../../../../store/store'
 import { useDispatch } from 'react-redux'
-import { campaignActions } from '../../../../../store/slices/campaignSlice'
-import MakePayment from '../../DonationsModal/MakePayment'
-import Donate from '../../DonationsModal/Donate'
+import { campaignActions } from '../../../../store/slices/campaignSlice'
+import MakePayment from '../../donations/DonationsModal/MakePayment'
+import Donate from '../../donations/DonationsModal/Donate'
 
 
 const CampaignSelector = () => {
@@ -30,7 +30,8 @@ const CampaignSelector = () => {
   const showCampaignDetails = () => {
     dispatch(campaignActions.setModalFeatures({
       title: "Campaign details",
-      size: "full"
+      size: "full",
+      modal_type: "campaign"
     }))
     setValues({
       campaignDetails: true,
@@ -43,7 +44,8 @@ const CampaignSelector = () => {
   const showDonate = () => {
     dispatch(campaignActions.setModalFeatures({
       title: "Donate",
-      size: "mid"
+      size: "mid",
+      modal_type: "campaign"
     }))
     setValues({
       campaignDetails: false,
@@ -56,7 +58,8 @@ const CampaignSelector = () => {
   const showMakePayment = () => {
     dispatch(campaignActions.setModalFeatures({
       title: "Make Payment",
-      size: "mid"
+      size: "mid",
+      modal_type: "campaign"
     }))
     setValues({
       campaignDetails: false,

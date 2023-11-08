@@ -16,7 +16,7 @@ const ProgressDoughnut = (props: Props) => {
                 background: conicGradient,
             }}
         >
-            <div className='w-[72px] h-[72px] absolute top-[3.5px] left-[3.5px] bg-white rounded-full flex items-center justify-center flex-col'>
+            <div className='w-[72px] h-[72px] absolute top-[3.5px] left-[4.5px] bg-white rounded-full flex items-center justify-center flex-col'>
                 <p className='text-gray/800'>{percentage}%</p>
                 <p className='text-gray/400 text-sm'>raised</p>
             </div>

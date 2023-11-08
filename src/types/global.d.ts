@@ -3,7 +3,20 @@ export { }
 declare global {
 
     type ToastType = 'error' | 'success' | 'info';
-
+    type Category =
+        | 'General'
+        | 'Accident'
+        | 'Arts & culture'
+        | 'Heritage'
+        | 'Wildlife'
+        | 'Childcare'
+        | 'Democracy'
+        | 'Education'
+        | 'Environment'
+        | 'Health'
+        | 'Justice'
+        | 'Mental Health'
+        | 'Other';
     interface CampaignItemData {
         img: any;
         title: string;
@@ -20,14 +33,17 @@ declare global {
             campaign_beneficiary: string;
             contact: string;
         }
+        category: Category[]
     }
+
 
     interface CampaignSliceProps {
         currentCampaignData: CampaignItemData | null;
         showModal: boolean;
-        modal:{
+        modal: {
             size: "full" | "mid";
-            title:string
+            title: string
+            modal_type: "campaign" | "account_settings" | "create_campaign" | ""
         };
     }
 

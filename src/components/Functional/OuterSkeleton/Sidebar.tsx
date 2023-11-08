@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 
-type SidebarItems = "Activity" | "Donations" | "Fundraiser" | "Settings"
+type SidebarItems = "Activity" | "Donations" | "Fundraisers" | "Settings"
 type SidebarMenuProps = {
     name: SidebarItems;
     link: string;
@@ -30,25 +30,25 @@ const Sidebar = () => {
     // <---------- useStates + variables ---------->
 
     const sidebarMenu: SidebarMenuProps = [
-        {
-            name: "Activity",
-            link: "/activity",
-            disabled: true
-        },
+        // {
+        //     name: "Activity",
+        //     link: "/activity",
+        //     disabled: true
+        // },
         {
             name: "Donations",
             link: "/donations",
             disabled: false
         },
         {
-            name: "Fundraiser",
-            link: "/fundraiser",
-            disabled: true
+            name: "Fundraisers",
+            link: "/fundraisers",
+            disabled: false
         },
         {
             name: "Settings",
-            link: "",
-            disabled: true
+            link: "/settings",
+            disabled: false
         },
     ]
     const [currentTab, setCurrentTab] = useState<string>('Donations')

@@ -55,7 +55,7 @@ const Toast: React.FC<ToastProps> = ({ message, onClose, type, title, index }) =
 
     return (
         <div
-            className={`py-2.5 px-4 grid grid-cols-[auto_1fr_auto] items-start gap-2.5 rounded-lg text-[#475467] text-xs sm:text-sm  text-left ${toastBG} transform transition-transform duration-300 ease-in-out w-full  z-[9999999999] `}
+            className={`py-2.5 px-4 grid grid-cols-[auto_1fr_auto] items-start gap-2.5 rounded-lg text-[#475467] text-xs sm:text-sm  text-left ${toastBG} transform transition-transform duration-300 ease-in-out w-full  z-[9999999999] max-w-[478px] `}
             style={toastStyle}
         >
             <img src={icon} alt="" />

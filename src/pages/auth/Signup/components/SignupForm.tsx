@@ -27,7 +27,7 @@ const SignupForm = () => {
         last_name: '',
         email: '',
         password: '',
-        confiirm_password: '',
+        confirm_password: '',
         terms: false,
     }
     // <---------- Functions ---------->

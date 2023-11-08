@@ -110,7 +110,11 @@ const validation = Yup.object({
     email: Yup.string().email("Invalid email address").required("Required"),
 
     password: Yup.string()
-        .min(6, "Password must be minimum of 6 characters")
-        .required("Required"),
+        .min(8, "Password must be minimum of 6 characters")
+        .required("Required")
+        .matches(/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&.+-])[A-Za-z\d@$!%*?&.+-]{8,}$/, {
+            message:
+                "Incorrect password format",
+        }),
 
 })

@@ -1,12 +1,13 @@
 import React from 'react'
+import { categories } from '../../../../../util/util'
 
 type Props = {
     currentCategory: string
-    selectCategory: (category: string) => void
+    selectCategory: (category: Category) => void
 }
 const Category = (props: Props) => {
 
-    const categories = ["General", "Accident", "Arts & culture", "Heritage", "Wildlife", "Childcare", "Democracy", "Education", "Environment", "Health", "Justice", "Mental Health"]
+
 
     return (
         <div className='flex gap-4 w-full overflow-scroll'>

@@ -7,9 +7,10 @@ type Props = {
     disabled: boolean; // Add the disabled prop
     setTouched: FormikHelpers<FormikValues>['setTouched'];
     setFieldValue: FormikHelpers<FormikValues>['setFieldValue'];
+    name?: string
 };
 
-const CustomAmount: React.FC<Props> = ({ value, setTouched, setFieldValue, disabled }) => {
+const CustomAmount: React.FC<Props> = ({ value, setTouched, setFieldValue, disabled, name }) => {
     const [amountFocus, setAmountFocus] = useState(false);
 
     return (
@@ -27,13 +28,21 @@ const CustomAmount: React.FC<Props> = ({ value, setTouched, setFieldValue, disab
             <div className="flex gap-0.5 items-center amount-clear group">
 
                 <Amount
-                    name="amount"
+                    name={name ?? "amount"}
                     value={value}
                     className="text-[#13201C]  text-sm relative z-0 input-field outline-none focus:outline-none peer flex group items-center border-none w-full peer"
                     onChange={(newValue) => {
-                        setTouched({ amount: true });
-                        const { formatted, float } = newValue;
-                        setFieldValue('amount', float);
+
+                        if (name) {
+                            setTouched({ name: true });
+                            const { formatted, float } = newValue;
+                            setFieldValue(name, float);
+                        } else {
+                            setTouched({ amount: true });
+                            const { formatted, float } = newValue;
+                            setFieldValue('amount', float);
+                        }
+
                     }}
                     decimalSeparator="."
                     thousandSeparator=","

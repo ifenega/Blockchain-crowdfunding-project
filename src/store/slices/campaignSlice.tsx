@@ -28,6 +28,10 @@ const campaignSlice = createSlice({
             state.showModal = false;
             state.modal = initialState.modal
         },
+        setShowModal: (state, action) => {
+            state.modal = action.payload
+            state.showModal = true
+        },
         setAccountSettings: (state, action) => {
             state.modal = action.payload
             state.showModal = true

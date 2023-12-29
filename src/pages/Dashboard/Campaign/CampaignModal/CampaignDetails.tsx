@@ -75,7 +75,7 @@ const Details = () => {
     ]
     // <---------- Functions ---------->
     return (
-        <div className='max-h-[calc(100vh-134px)] md:h-[600px] 2xl:h-full overflow-scroll'>
+        <div className='max-h-[calc(100vh-134px)] md:h-[550px] 2xl:h-full overflow-scroll'>
             <div className='relative mb-2'>
                 <img src={campaignDetails?.img} className='w-full max- h-[215px] rounded object-cover' alt='' />
 
@@ -133,3 +133,64 @@ const Details = () => {
         </div>
     )
 }
+
+
+// import { IonModal } from "@ionic/react";
+// import React, { useState } from "react";
+// import disclaimerIcon from "../../assets/dashboard/Settings/disclaimerIcon.svg"
+// import { BorderButton, Button } from "../../components/Buttons/Button";
+
+// type Props = {
+
+//     modalIsOpen: boolean;
+//     closeModal: () => void;
+//     goHome: () => void;
+
+// };
+
+// const DisclaimerModal = (props: Props) => {
+
+//     return (
+//         <IonModal
+//             className="my-sheet"
+//             isOpen={props.modalIsOpen}
+//             id={"disclaimer-modal"}
+//             onDidDismiss={props.closeModal}
+//         >
+//             <div
+//                 className={`h-fit overflow-y-scroll bg-white p-6 pb-12   w-full rounded-[32px] `}
+//             >
+//                 <div className="flex gap-2 items-center mb-4">
+//                     <img src={disclaimerIcon} alt='' />
+//                     <h5 className="text-gray/800 text-xl font-semibold tracking-[-0.3px]">Disclaimer</h5>
+//                 </div>
+
+//                 <p className="text-gray/700 text-sm tracking-[-0.21px] mb-6">This part of the app is intended for guardians only. If you are under the age of 13, we kindly ask you not to visit or use this page. We are committed to providing a safe and appropriate online experience for our children. </p>
+
+//                 <div className="flex flex-col gap-4">
+
+//                     <Button
+//                         text={"I’m a parent"}
+//                         type="button"
+//                         action={() => {
+//                             props.closeModal()
+//                         }}
+//                     />
+
+//                     <BorderButton
+//                         text={"I’m not up to 13 years old"}
+//                         type="button"
+//                         action={() => {
+//                             console.log("sdjdj")
+//                         }}
+
+//                     />
+
+//                 </div>
+
+//             </div>
+
+//         </IonModal>
+//     );
+// };
+// export default DisclaimerModal;

@@ -103,7 +103,7 @@ export const campaign_data: CampaignItemData[] = [
         amount_raised: 2004,
         currency: "USDT",
         created_at: "",
-        deadline: "2023-11-08T15:30:45.123Z",
+        deadline: "2024-02-08T15:30:45.123Z",
         wallet_address: "",
         contact_details: {
             campaign_creator: "Olorunnegan Ifeoluwa",
@@ -121,7 +121,7 @@ export const campaign_data: CampaignItemData[] = [
         amount_raised: 20000,
         currency: 'USDT',
         created_at: new Date().toISOString(),
-        deadline: '2023-11-06T15:30:45.123Z',
+        deadline: '2024-01-06T15:30:45.123Z',
         wallet_address: 'your_wallet_address',
         contact_details: {
             campaign_creator: 'Temi Frank',
@@ -139,7 +139,7 @@ export const campaign_data: CampaignItemData[] = [
         amount_raised: 3500,
         currency: 'BTC',
         created_at: '',
-        deadline: '2023-11-10T12:45:30.567Z',
+        deadline: '2024-01-10T12:45:30.567Z',
         wallet_address: '',
         contact_details: {
             campaign_creator: 'Temi Frank',
@@ -157,7 +157,7 @@ export const campaign_data: CampaignItemData[] = [
         amount_raised: 6000,
         currency: 'USDT',
         created_at: '',
-        deadline: '2023-11-15T11:20:15.321Z',
+        deadline: '2024-01-15T11:20:15.321Z',
         wallet_address: '',
         contact_details: {
             campaign_creator: 'Creator 4',
@@ -175,7 +175,7 @@ export const campaign_data: CampaignItemData[] = [
         amount_raised: 2004,
         currency: "USDT",
         created_at: "",
-        deadline: "2023-11-08T15:30:45.123Z",
+        deadline: "2024-02-08T15:30:45.123Z",
         wallet_address: "",
         contact_details: {
             campaign_creator: "Olorunnegan Ifeoluwa",
@@ -193,7 +193,7 @@ export const campaign_data: CampaignItemData[] = [
         amount_raised: 20000,
         currency: 'USDT',
         created_at: new Date().toISOString(),
-        deadline: '2023-11-06T15:30:45.123Z',
+        deadline: '2024-01-06T15:30:45.123Z',
         wallet_address: 'your_wallet_address',
         contact_details: {
             campaign_creator: 'Temi Frank',
@@ -211,7 +211,7 @@ export const campaign_data: CampaignItemData[] = [
         amount_raised: 3500,
         currency: 'BTC',
         created_at: '',
-        deadline: '2023-11-10T12:45:30.567Z',
+        deadline: '2024-02-10T12:45:30.567Z',
         wallet_address: '',
         contact_details: {
             campaign_creator: 'Temi Frank',
@@ -229,7 +229,7 @@ export const campaign_data: CampaignItemData[] = [
         amount_raised: 6000,
         currency: 'USDT',
         created_at: '',
-        deadline: '2023-11-15T11:20:15.321Z',
+        deadline: '2024-01-15T11:20:15.321Z',
         wallet_address: '',
         contact_details: {
             campaign_creator: 'Creator 4',

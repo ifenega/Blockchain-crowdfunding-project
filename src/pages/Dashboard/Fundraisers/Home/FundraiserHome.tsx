@@ -5,10 +5,15 @@ import Campaign from '../../Campaign/Campaign'
 import Button from '../../../../components/Buttons/Button'
 import Category from './components/Category'
 import { CustomToast, campaign_data } from '../../../../util/util'
+import { AppDispatch } from '../../../../store/store'
+import { useDispatch } from 'react-redux'
+import { campaignActions } from '../../../../store/slices/campaignSlice'
 
 const FundraiserHome = () => {
 
     // <---------- Utility class --------->
+    const dispatch: AppDispatch = useDispatch()
+
     // <---------- useSelectors --------->
     // <---------- HOOKS ------------>
     // <---------- useStates + variables ---------->
@@ -21,19 +26,19 @@ const FundraiserHome = () => {
     const filteredCampaigns = campaign_data.filter((campaign) => {
         // Check if the campaign's title or description contains the searchValue (case-insensitive)
         const isSearchMatch = campaign.title.toLowerCase().includes(searchValue.toLowerCase()) ||
-          campaign.description.toLowerCase().includes(searchValue.toLowerCase());
-      
+            campaign.description.toLowerCase().includes(searchValue.toLowerCase());
+
         // Check if the campaign is active (deadline is in the future) or inactive (deadline is in the past)
         const currentDate = new Date();
         const campaignDeadline = new Date(campaign.deadline);
-        
+
         // If "Inactive" category is selected, show campaigns with past deadlines
         const isInactiveCategory = currentCategory === "Ended";
         const isCampaignActive = isInactiveCategory ? currentDate > campaignDeadline : currentDate <= campaignDeadline;
-      
+
         return isCampaignActive && isSearchMatch;
-      });
-      
+    });
+
 
 
 
@@ -61,7 +66,11 @@ const FundraiserHome = () => {
                     text={"New campaign"}
                     type='button'
                     action={() => {
-                        CustomToast('success', `An email with reset instructions has been sent to toa `)
+                        dispatch(campaignActions.setShowModal({
+                            title: "Create a campaign",
+                            size: "mid",
+                            modal_type: "create_campaign"
+                          }))
                     }}
                 />
             </div>

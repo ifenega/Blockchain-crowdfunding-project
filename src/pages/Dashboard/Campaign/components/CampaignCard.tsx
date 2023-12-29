@@ -24,7 +24,7 @@ const CampaignCard = (props: Props) => {
 
   return (
     <div className='p-2 rounded-xl border b
-    order-gray/100 flex flex-col gap-4 w-full md:max-w-[361px]'>
+    order-gray/100 flex flex-col gap-4 w-full 2xl:max-w-[361px]'>
 
       <div className='w-full'>
         <div className='relative mb-2'>

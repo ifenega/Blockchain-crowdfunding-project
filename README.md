@@ -26,7 +26,7 @@ Blockchain-crowdfunding-project is a decentralized platform built on the Solana 
 ### Building and Deployment
 
 1. Build the Anchor project: `anchor build`
-2. Deploy the smart contract: `solana deploy target/deploy/my_donation_platform.so`
+2. Deploy the smart contract: `solana deploy target/deploy/backend.so`
 
 ### Usage
 

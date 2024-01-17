@@ -5,7 +5,7 @@ const UserProfileCard = () => {
 
     return (
         <div className='flex items-center gap-2 '>
-            <div className=' '>
+            <div className='hidden lg:flex flex-col '>
                 <h6 className='text-gray/700 text-sm font-medium '>Ifeoluwa Olurunnegan</h6>
                 <p className='text-gray/500 text-xs leading-[18px]'>iphe@gmail.com</p>
             </div>

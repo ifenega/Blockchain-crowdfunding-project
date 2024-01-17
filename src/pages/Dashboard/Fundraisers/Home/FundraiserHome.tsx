@@ -50,10 +50,10 @@ const FundraiserHome = () => {
         <Layout title='Fundraisers'>
             <Header title='Fundraisers' />
 
-            <div className='flex items-center justify-between'>
+            <div className='flex gap-4 flex-col items-start md:flex-row md:items-center justify-between'>
                 <input
                     type='text'
-                    className={`border border-[#E0E6E9] outline-none focus:border-primary/600 rounded-lg px-4 py-2.5 bg-white disabled:bg-[#E5EAEC] w-[320px]`}
+                    className={`border border-[#E0E6E9] outline-none focus:border-primary/600 rounded-lg px-4 py-2.5 bg-white disabled:bg-[#E5EAEC] w-full md:w-[320px]`}
                     placeholder='Search for a fundraiser by name'
                     value={searchValue}
                     onChange={(e: any) => {
@@ -70,7 +70,7 @@ const FundraiserHome = () => {
                             title: "Create a campaign",
                             size: "mid",
                             modal_type: "create_campaign"
-                          }))
+                        }))
                     }}
                 />
             </div>

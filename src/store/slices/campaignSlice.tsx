@@ -10,12 +10,17 @@ const initialState: CampaignSliceProps = {
         title: "",
         modal_type: ""
     },
+    mobileMenu: false,
+
 };
 
 const campaignSlice = createSlice({
     name: 'campaign',
     initialState,
     reducers: {
+        setMobileSideBarMenu: (state, action) => {
+          state.mobileMenu = action.payload;
+        },
         setCampaignData: (state, action) => {
             state.currentCampaignData = action.payload;
             state.showModal = true

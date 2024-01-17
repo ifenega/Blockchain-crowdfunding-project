@@ -120,7 +120,7 @@ const CreateCampaign = (props: Props) => {
                                 <FormError value_name='campaign_beneficiary' />
                             </div>
 
-                            <div className='flex gap-4 items-center'>
+                            <div className='flex flex-col md:flex-row gap-4 items-center'>
                                 <div className='w-full'>
                                     <CustomLabel name='Campaign category' value_name='campaign_category' />
                                     <Field
@@ -134,6 +134,26 @@ const CreateCampaign = (props: Props) => {
                                     />
                                     <FormError value_name='campaign_category' />
                                 </div>
+
+
+                                <div className='w-full'>
+                                    <CustomLabel name='Campaign end date' value_name='campaign_end_date' />
+                                    <input
+                                        type={"datetime-local"}
+                                        id={"campaign_end_date"}
+                                        name={"campaign_end_date"}
+                                        value={values.campaign_end_date}
+                                        onChange={(option: any) => {
+                                            setFieldValue("campaign_end_date", option.target.value);
+                                        }}
+
+
+                                        className={`border ${touched.campaign_end_date && errors.campaign_end_date ?
+                                            "border-[#CF4E4E]" : "border-[#E0E6E9]"
+                                            } outline-none focus:border-[#AFD1E3] rounded-lg px-4 py-2.5 bg-white disabled:bg-[#E5EAEC] w-full`}
+                                    />
+                                </div>
+
 
                                 {/* <div className='w-full'>
                                     <CustomLabel name='Campaign end date' value_name='campaign_end_date' />

@@ -45,6 +45,8 @@ declare global {
             title: string
             modal_type: "campaign" | "account_settings" | "create_campaign" | ""
         };
+        mobileMenu: boolean,
+
     }
 
 }

@@ -40,7 +40,7 @@ const Home = () => {
 
       <input
         type='text'
-        className={`border border-[#E0E6E9] outline-none focus:border-primary/600 rounded-lg px-4 py-2.5 bg-white disabled:bg-[#E5EAEC] w-[320px]`}
+        className={`border border-[#E0E6E9] outline-none focus:border-primary/600 rounded-lg px-4 py-2.5 bg-white disabled:bg-[#E5EAEC] w-full md:w-[320px]`}
         placeholder='Search for a donation by name'
         value={searchValue}
         onChange={(e: any) => {

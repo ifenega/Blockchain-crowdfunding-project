@@ -12,6 +12,7 @@ import FundraiserHome from './pages/Dashboard/Fundraisers/Home/FundraiserHome';
 import Fundraisers from './pages/Dashboard/Fundraisers/Fundraisers';
 import SettingsHome from './pages/Dashboard/Settings/Home/SettingsHome';
 import Settings from './pages/Dashboard/Settings/Settings';
+import "@solana/wallet-adapter-react-ui/styles.css";
 
 
 function App() {

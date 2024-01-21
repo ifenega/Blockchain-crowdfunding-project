@@ -4,6 +4,7 @@ import UserProfileCard from './UserProfileCard'
 import { useDispatch, useSelector } from 'react-redux';
 import { AppDispatch } from '../../../store/store';
 import { campaignActions } from '../../../store/slices/campaignSlice';
+import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 
 const Header = () => {
 
@@ -41,8 +42,10 @@ const Header = () => {
                     ></div>
                 </button>
             </div>
-
-            <UserProfileCard />
+        <div className='flex justify-between items-center '>
+             <UserProfileCard />
+             <WalletMultiButton />
+        </div>
         </div>
     )
 }

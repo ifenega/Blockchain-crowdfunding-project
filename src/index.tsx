@@ -6,20 +6,24 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from 'react-redux';
 import { store } from './store/store';
+import WalletConnetProvider from './functions/WalletConnectProvider';
 // import ThemeSuspense from './components/UI/ThemeSuspense';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
-  <Provider store={store}>
-    <BrowserRouter basename="/">
-      {/* <Suspense fallback={<ThemeSuspense />}> */}
-      <App />
-      {/* </Suspense> */}
-    </BrowserRouter>
-  </Provider >
-);
+  <WalletConnetProvider>
+    <Provider store={store}>
+      <BrowserRouter basename="/">
+        {/* <Suspense fallback={<ThemeSuspense />}> */}
+        <App />
+        {/* </Suspense> */}
+      </BrowserRouter>
+    </Provider >
+  </WalletConnetProvider>
+  );
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
